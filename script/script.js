@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const togglePassword = document.getElementById('togglePassword');
 const passwordInput = document.getElementById('password');
 
@@ -40,3 +41,13 @@ if (showRegister && showLogin) {
         signInForm.style.display = "block";
     });
 }
+=======
+
+function pindahKeReservasi(){
+    console.log("memindahkkan ke halaman reservasi...")
+    window.location.href = "reservasi.html"
+}
+
+const tombolReservasi = document.getElementsByClassName("btnReservasi")[0];
+tombolReservasi.addEventListener("click",pindahKeReservasi)
+>>>>>>> da9594495ade90852f24a4484eece9da505f3d9a
