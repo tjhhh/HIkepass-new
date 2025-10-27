@@ -1,24 +1,21 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 /* GLOBAL */
-<<<<<<< HEAD
 * {
   box-sizing: border-box;
 }
 
-=======
 html {
   scroll-behavior: smooth;
 }
 
-
->>>>>>> da9594495ade90852f24a4484eece9da505f3d9a
 body {
   font-family: 'Poppins';
   margin: 0;
   background-color: #f6fcf9;
   color: #111;
 }
+
 /* NAVBAR */
 .navbar {
   background-color: #083c35;
@@ -80,14 +77,21 @@ body {
   outline: none;
 }
 
-<<<<<<< HEAD
+.navbar__search img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* LOGIN PAGE */
 .login-page {
   display: flex;
   height: 100vh;
   width: 100%;
 }
 
-.split-left{
+.split-left {
   flex: 1;
   background-color: #ffffff;
   display: flex;
@@ -96,15 +100,15 @@ body {
   text-align: center;
 }
 
+.split-left .content {
+  width: 80%;
+  max-width: 400px;
+}
+
 /* Input */
 .input-group {
   position: relative;
   margin-bottom: 18px;
-}
-
-.split-left .content {
-  width: 80%;
-  max-width: 400px;
 }
 
 .input-group input {
@@ -216,15 +220,6 @@ body {
   align-items: center;
   text-align: center;
 }
-=======
-.navbar__search img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* ===CONTAINER=== */
 
 /* ===============================
    HERO SECTION
@@ -259,7 +254,7 @@ body {
 ================================== */
 .search-section {
   position: absolute;
-  top: 490px; /* posisi vertikalnya */
+  top: 490px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
@@ -270,11 +265,10 @@ body {
 
 .search-box {
   background: #fff;
-  width: 600px; /* atur lebar search bar */
+  width: 600px;
   max-width: 600px;
   padding: 12px 20px;
   border-radius: 19px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -287,51 +281,44 @@ body {
   outline: none;
   font-size: 16px;
   color: #333;
-  transition: transform 0.2s ease,
 }
 
-.search-box:hover{
-    
-    transform: translateY(-5px);
-  
+.search-box:hover {
+  transform: translateY(-5px);
 }
-
 
 /* ===============================
-   FEATURE
+   FEATURE SECTION
 ================================== */
-.feature-section{
-    margin: 80px 100px;
-
+.feature-section {
+  margin: 80px 100px;
 }
 
-.container-feature{
-    display: flex;
-    gap: 120px;
-    justify-content: center;
+.container-feature {
+  display: flex;
+  gap: 120px;
+  justify-content: center;
 }
 
-.btnReservasiHome, .btnRiwayat, .btnInformasi,.btnLaporan img{
-    width: 40px;
+.btnReservasiHome, .btnRiwayat, .btnInformasi, .btnLaporan img {
+  width: 40px;
 }
 
-.btnReservasiHome, .btnRiwayat, .btnInformasi,.btnLaporan{
-    padding: 20px 20px;
-    border-radius: 15px;
-    border: 1px solid #083c35;
-    background-color: #083c35;
-    color: white;
-    width: 120px;
-    cursor: pointer;
-    transition: transform 0.2s ease,
+.btnReservasiHome, .btnRiwayat, .btnInformasi, .btnLaporan {
+  padding: 20px 20px;
+  border-radius: 15px;
+  border: 1px solid #083c35;
+  background-color: #083c35;
+  color: white;
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.btnReservasiHome:hover, .btnRiwayat:hover, .btnInformasi:hover,.btnLaporan:hover{
-     transform: translateY(-5px);
+.btnReservasiHome:hover, .btnRiwayat:hover, .btnInformasi:hover, .btnLaporan:hover {
+  transform: translateY(-5px);
   background: linear-gradient(135deg, #00695c, #004d40);
 }
-
-
 
 /* ===============================
    RESPONSIVE
@@ -350,77 +337,73 @@ body {
   }
 }
 
-
-
 /* ============================= 
-    Halaman Reservasi
-*/
-
-.container-list img{
-    width: 100%;
-    height: 200px;
+   Halaman Reservasi
+================================== */
+.container-list img {
+  width: 100%;
+  height: 200px;
 }
 
 /* ===============================
    SEARCH RESERVASI SECTION
 ================================== */
 .search-rsv-section {
-    position: relative;
-    width: 100%;
-    height: 600px; 
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
 }
 
 .container-search-rsv {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .container-search-rsv img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover; 
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
 }
 
-
 .title-rsv {
-    position: absolute;
-    top: 120px; /* di atas search bar */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 48px;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-    margin: 0;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  margin: 0;
 }
 
 .search-rsv-container {
-    position: absolute;
-    top: 220px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .search-rsv-container input {
-    width: 100%;
-    padding: 15px 25px;
-    font-size: 16px;
-    border: none;
-    border-radius: 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    outline: none;
-    transition: all 0.3s ease;
+  width: 100%;
+  padding: 15px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  outline: none;
+  transition: all 0.3s ease;
 }
 
 .search-rsv-container input:focus {
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-/* ===== CONTAINER ===== */
+/* ===== CARD LIST ===== */
 .container {
   display: flex;
   justify-content: center;
@@ -429,7 +412,6 @@ body {
   padding: 0 40px 60px;
 }
 
-/* ===== CARD ===== */
 .mountain-card {
   background-color: #fff;
   border-radius: 15px;
@@ -517,5 +499,3 @@ body {
   background-color: #083c35;
   color: white;
 }
-
->>>>>>> da9594495ade90852f24a4484eece9da505f3d9a
