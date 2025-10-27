@@ -4,5 +4,5 @@ function pindahKeReservasi(){
     window.location.href = "reservasi.html"
 }
 
-const tombolReservasi = document.getElementsByClassName("btnReservasi")[0];
+const tombolReservasi = document.getElementsByClassName("btnReservasiHome")[0];
 tombolReservasi.addEventListener("click",pindahKeReservasi)
