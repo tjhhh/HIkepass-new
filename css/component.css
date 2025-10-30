@@ -1,0 +1,67 @@
+/* Component Styles component.css */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e6f3ea;
+    background: #fbfffb;
+    font-size: 14px;
+    outline: none;
+    transition: box-shadow .15s, border-color .15s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(47, 166, 106, 0.12);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.muted {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+button {
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button.primary {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(15, 122, 74, 0.16);
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button.primary:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+button.secondary {
+    background: transparent;
+    border: 1px solid rgba(15, 122, 74, 0.2);
+    color: var(--secondary);
+}
+
+button.secondary:hover {
+    background: rgba(15, 122, 74, 0.05);
+}

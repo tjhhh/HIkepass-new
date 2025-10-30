@@ -1,0 +1,89 @@
+/* ===== PAGE FEATURES SECTION ===== */
+
+.page-features {
+  padding: 60px 20px;
+}
+
+.features-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* lebih besar */
+  gap: 28px;
+}
+
+/* FEATURE ITEM */
+.feature-item {
+  background: var(--primary);
+  border-radius: 18px;
+  padding: 32px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--background);
+  text-decoration: none;
+  border: 1px solid #DCE8D9;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: all .25s ease;
+  min-height: 160px;
+}
+
+/* HOVER EFFECT */
+.feature-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  border-color: #3FA66A;
+}
+
+/* ICON */
+.feature-item img {
+  width: 60px;  /* bigger icon */
+  height: 60px;
+  transition: 0.2s ease-in-out;
+}
+
+.feature-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media(max-width: 820px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+/* Mobile Horizontal Buttons */
+@media(max-width: 600px) {
+  .features-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .feature-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 18px 18px;
+    border-radius: 14px;
+    gap: 18px;
+    min-height: auto;
+  }
+
+  .feature-item img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .feature-item span {
+    font-size: 16px;
+  }
+}
