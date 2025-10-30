@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/page-login.css">
 </head>
 
 <body>
@@ -15,7 +18,7 @@
             <div class="content" id="formContainer">
                 <!-- ===== FORM SIGN IN ===== -->
                 <div id="signInForm">
-                    <h2>Sign In</h2>
+                    <h2 style="padding: 20px;">Sign In</h2>
 
                     <div class="input-group">
                         <input type="email" placeholder="Email">
@@ -28,7 +31,7 @@
 
                     <p class="forgot">Lupa kata sandi Anda?</p>
 
-                    <button class="signin-btn">SIGN IN</button>
+                    <button class="signin-btn" id="signin-btn">SIGN IN</button>
 
                     <div class="divider">
                         <span></span>
@@ -36,7 +39,7 @@
                         <span></span>
                     </div>
 
-                    <button class="white-btn" id="showRegister">SIGN UP</button>
+                    <button class="white-btn" id="showRegister">REGISTER</button>
                 </div>
 
                 <!-- ===== FORM REGISTER ===== -->
@@ -59,7 +62,7 @@
                         <input type="password" placeholder="Konfirmasi Password">
                     </div>
 
-                    <button class="signin-btn">DAFTAR</button>
+                    <button class="signin-btn" id="daftar-btn">DAFTAR</button>
 
                     <div class="divider">
                         <span></span>
@@ -75,9 +78,8 @@
         <!-- BAGIAN KANAN -->
         <div class="split-right">
             <div class="content">
-                <h1>Selamat Datang<br>di Hikepass!</h1>
+                <h1 style="margin-bottom: 20px;">Selamat Datang<br>di Hikepass!</h1>
                 <p>Register sekarang! untuk menikmati Semua<br>fitur yang tersedia di Hikepass.</p>
-                <button class="white-btn" id="adminBtn">ADMIN</button>
             </div>
         </div>
     </div>
