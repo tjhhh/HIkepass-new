@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/page-laporan.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logoHikepass.svg" alt="Logo HikePass">
+            <h2>HikePass</h2>
+        </div>
+
+        <nav class="navbar-menu">
+            <a href="home.html">Home</a>
+            <a href="reservasi.html">Reservasi</a>
+            <a href="#">Tiket Saya</a>
+        </nav>
+
+        <div class="logo">
+            <p>Hai, Yanto</p>
+            <img src="assets/avatarUSer.png" alt="Logo User">
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1 class="hero-title">Laporan</h1>
+            <p>Home / Laporan</p>
+        </div>
+    </section>
+
+    <!-- FORM WRAPPER -->
+    <div class="card" role="region" aria-label="Form Laporan HikePass">
+        <h1 class="title-form">Form Laporan HikePass</h1>
+        <p class="lead">Laporkan kejadian atau masalah yang Anda temui di area pendakian.</p>
+
+        <form id="reportForm" enctype="multipart/form-data" method="post" novalidate>
+            <div class="row">
+                <div>
+                    <label for="nama">Nama</label>
+                    <input id="nama" name="nama" type="text" placeholder="Nama lengkap" required />
+                </div>
+                <div>
+                    <label for="email">Email / Telepon</label>
+                    <input id="email" name="email" type="email" placeholder="email@contoh.com" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <label for="tanggal">Tanggal Kejadian</label>
+                    <input id="tanggal" name="tanggal" type="date" required />
+                </div>
+                <div>
+                    <label for="kategori">Kategori Laporan</label>
+                    <select id="kategori" name="kategori" required>
+                        <option value="">Pilih kategori</option>
+                        <option>Keamanan</option>
+                        <option>Fasilitas</option>
+                        <option>Lingkungan</option>
+                        <option>Lainnya</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label for="lokasi">Lokasi</label>
+                <input id="lokasi" name="lokasi" type="text" placeholder="Contoh: Jalur A - Pos 3" />
+            </div>
+
+            <div>
+                <label for="deskripsi">Deskripsi</label>
+                <textarea id="deskripsi" name="deskripsi" placeholder="Jelaskan kronologi kejadian..."
+                    required></textarea>
+            </div>
+
+            <div>
+                <label for="foto">Unggah Foto (opsional)</label>
+                <input id="foto" name="foto" type="file" accept="image/*" />
+                <div class="muted">Format: JPG/PNG. Maks 5MB.</div>
+            </div>
+
+            <div class="actions">
+                <button type="submit" class="primary">Kirim Laporan</button>
+                <button type="reset" class="secondary">Reset</button>
+            </div>
+        </form>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

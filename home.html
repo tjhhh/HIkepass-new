@@ -3,76 +3,71 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Hikepass</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HikePass - Home</title>
+
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/page-home.css">
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <header class="navbar">
-        <div class="navbar__logo">
+        <div class="logo">
             <img src="assets/logoHikepass.svg" alt="Logo HikePass">
             <h2>HikePass</h2>
         </div>
-        <nav class="navbar__menu">
-            <a href="home.html">Home</a>
+
+        <nav class="navbar-menu">
+            <a href="#">Home</a>
             <a href="reservasi.html">Reservasi</a>
             <a href="#">Tiket Saya</a>
         </nav>
-        <div class="navbar__search">
+
+        <div class="logo">
             <p>Hai, Yanto</p>
-            <img src="assets/avatarUSer.png" alt="Avatar Yanto">
+            <img src="assets/avatarUSer.png" alt="User Avatar">
         </div>
     </header>
 
-    <main>
-        <section class="page-banner page-banner--home">
-            <div class="page-banner__container">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1 class="hero-title">Ticketing Pendakian Gunung</h1>
+            <p>Tempat pemesanan tiket pendakian gunung di Indonesia</p>
+            <input type="text" class="search-input" placeholder="Cari nama gunung atau lokasi..." style="margin-top: 30px;">
+        </div>
+    </section>
 
-                <div>
-                    <h1 class="page-banner__home-title">Ticketing Pendakian Gunung</h1>
-                    <p class="page-banner__home-subtitle">
-                        Tempat pemesanan tiket pendakian gunung di Indonesia
-                    </p>
-                </div>
-                <div class="page-banner__search-wrapper">
-                    <form class="search-form">
-                        <input type="text" class="search-form__input" placeholder="Cari nama gunung atau lokasi...">
-                    </form>
-                </div>
+    <!-- FEATURE MENU -->
+    <section class="page-features">
+        <div class="features-grid">
 
-                <img class="page-banner__bg" alt="">
-                <h2 class="page-banner__title"></h2>
-                <div class="page-banner__search-wrapper"></div>
+            <a href="reservasi.html" class="feature-item">
+                <img src="assets/iconTicket.svg" alt="">
+                <span>Reservasi</span>
+            </a>
 
-            </div>
-        </section>
+            <a href="#" class="feature-item">
+                <img src="assets/iconRiwayat.svg" alt="">
+                <span>Riwayat</span>
+            </a>
 
-        <section class="features container">
-            <div class="features__container">
-                <button class="feature-card" id="btn-reservasi">
-                    <img src="assets/iconTicket.svg" alt="">
-                    <h3>Reservasi</h3>
-                </button>
+            <a href="#" class="feature-item">
+                <img src="assets/iconInformasi.svg" alt="">
+                <span>Informasi</span>
+            </a>
 
-                <button class="feature-card" id="btn-riwayat">
-                    <img src="assets/iconRiwayat.svg" alt="">
-                    <h3>Riwayat</h3>
-                </button>
-
-                <button class="feature-card" id="btn-informasi">
-                    <img src="assets/iconInformasi.svg" alt="">
-                    <h3>Informasi</h3>
-                </button>
-
-                <button class="feature-card" id="btn-laporan">
-                    <img src="assets/iconAlert.svg" alt="">
-                    <h3>Laporan</h3>
-                </button>
-            </div>
-        </section>
-    </main>
+            <a href="laporan.html" class="feature-item">
+                <img src="assets/iconAlert.svg" alt="">
+                <span>Laporan</span>
+            </a>
+        </div>
+    </section>
 
     <script src="script/script.js"></script>
 </body>

@@ -1,70 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* ===================================================================
-   1. GLOBAL & RESET
-=================================================================== */
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Poppins';
-    background-color: #f6fcf9;
-    color: #111;
-    /* Ganjalan untuk fixed navbar (Tinggi navbar: 80px) */
-    padding-top: 80px; 
+  font-family: 'Poppins';
+  margin: 0;
+  background-color: #f6fcf9;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* ===================================================================
-   2. LAYOUT
-=================================================================== */
-.container {
-    width: 100%;
-    margin: 0 ;
-    padding: 0 40px;
-}
-
-/* ===================================================================
-   3. KOMPONEN (REUSABLE)
-=================================================================== */
-
-/* --- Navbar --- */
+/* NAVBAR */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #083c35;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
+  background-color: #083c35;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 40px;
+  width: 100%;
 }
 /* ... (Style navbar__logo, navbar__menu, navbar__search tetap sama) ... */
 .navbar__logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-basis: 220px;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-basis: 220px;
+  /* ukuran pasti kiri */
+  flex-shrink: 0;
+  /* jangan mengecil */
 }
 .navbar__logo img {
     width: 40px;
     height: 40px;
 }
 .navbar__menu {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    gap: 55px;
+  flex: 1;
+  /* menu bisa melar */
+  display: flex;
+  justify-content: center;
+  /* selalu center */
+  gap: 55px;
 }
 .navbar__menu a {
     color: white;
@@ -76,12 +61,13 @@ body {
     text-decoration: underline;
 }
 .navbar__search {
-    flex-basis: 220px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
+  flex-basis: 220px;
+  /* ukuran pasti kanan */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
 }
 .navbar__search img {
     height: 40px;
@@ -90,77 +76,221 @@ body {
     cursor: pointer;
 }
 
+/* LOGIN PAGE */
 
-/* --- Search Form --- */
-.search-form {
-    top: 20px;
-    background: #fff;
-    width: 100%;
-    max-width: 600px;
-    padding: 12px 20px;
-    border-radius: 99px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    gap: 10px;
-    transition: box-shadow 0.3s ease;
+
+/* ===============================
+   HERO SECTION
+================================== */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../assets/imgBanner.jpg') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
 }
-.search-form:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+
+.hero-title {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
-.search-form__input {
-    flex: 1;
-    border: none;
-    outline: none;
+
+.hero-subtitle {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* ===============================
+   SEARCH SECTION
+================================== */
+.search-section {
+  position: absolute;
+  top: 490px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.search-box {
+  background: #fff;
+  width: 600px;
+  max-width: 600px;
+  padding: 12px 20px;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.search-box:hover {
+  transform: translateY(-5px);
+}
+
+/* ===============================
+   FEATURE SECTION
+================================== */
+.feature-section {
+  margin: 80px 100px;
+}
+
+.container-feature {
+  display: flex;
+  gap: 120px;
+  justify-content: center;
+}
+
+.btnReservasiHome,
+.btnRiwayat,
+.btnInformasi,
+.btnLaporan img {
+  width: 40px;
+}
+
+.btnReservasiHome,
+.btnRiwayat,
+.btnInformasi,
+.btnLaporan {
+  padding: 20px 20px;
+  border-radius: 15px;
+  border: 1px solid #083c35;
+  background-color: #083c35;
+  color: white;
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btnReservasiHome:hover,
+.btnRiwayat:hover,
+.btnInformasi:hover,
+.btnLaporan:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #00695c, #004d40);
+}
+
+/* ===============================
+   RESPONSIVE
+================================== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
     font-size: 16px;
-    color: #333;
-    background: transparent;
+  }
+
+  .search-box {
+    width: 80%;
+  }
 }
 
-/* --- Button --- */
-.btn {
-    padding: 10px 20px;
-    border-radius: 9px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    border: 1px solid transparent;
-    font-size: 1rem;
-}
-.btn--primary {
-    background-color: #083c35;
-    border-color: #083c35;
-    color: white;
-}
-.btn--primary:hover {
-    background: linear-gradient(135deg, #00695c, #004d40);
-    border-color: #004d40;
-    transform: translateY(-2px);
-}
-.btn--outline {
-    background-color: #ffffff;
-    border-color: #00a67e;
-    color: #00a67e;
-}
-.btn--outline:hover {
-    background-color: #083c35;
-    color: white;
-    border-color: #083c35;
+/* ============================= 
+   Halaman Reservasi
+================================== */
+.container-list img {
+  width: 100%;
+  height: 200px;
 }
 
-/* --- Mountain Card --- */
+/* ===============================
+   SEARCH RESERVASI SECTION
+================================== */
+.search-rsv-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.container-search-rsv {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.container-search-rsv img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.title-rsv {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.search-rsv-container {
+  position: absolute;
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-rsv-container input {
+  width: 100%;
+  padding: 15px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-rsv-container input:focus {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== CARD LIST ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 40px 60px;
+}
+
 .mountain-card {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 360px;
-    overflow: hidden;
-    transition: 0.3s ease;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 /* ... (Style .mountain-card:hover, __image, __content, __title, __info, __price, dll. tetap sama) ... */
 .mountain-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 .mountain-card__image {
     width: 100%;
@@ -295,87 +425,106 @@ body {
     min-width: 300px;
     z-index: 5;
 }
-/* Sembunyikan elemen yg cuma ada di Home */
-.page-banner--reservasi .page-banner__home-title,
-.page-banner--reservasi .page-banner__home-subtitle {
-    display: none;
+
+.btnReservasi:hover {
+  background-color: #083c35;
+  color: white;
 }
 
-/* --- Halaman: HOME (Features) --- */
-.features {
-    margin: 80px 0;
-}
-.features__container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-}
-.feature-card {
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid #083c35;
-    background-color: #083c35;
-    color: white;
-    width: 140px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    text-align: center;
-}
-.feature-card:hover {
-    transform: translateY(-5px);
-    background: linear-gradient(135deg, #00695c, #004d40);
-}
-.feature-card img {
-    width: 40px;
-    margin-bottom: 10px;
-}
-.feature-card h3 {
-    font-size: 1rem;
-    margin: 0;
+/* ===============================
+   FORM LAPORAN SECTION
+================================== */
+.section-banner-report {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
-/* --- Halaman: RESERVASI (List Section) --- */
-.list-section {
-    padding: 60px 0; /* Jarak dari banner di atas */
-}
-.list-section__container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+.img-banner-report {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
-/* ===================================================================
-   5. RESPONSIVE
-=================================================================== */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px;
-    }
-    .navbar__menu {
-        display: none;
-    }
-    .navbar__search {
-        flex-basis: auto;
-    }
+.card {
+  align-items: center;
+  width: 100%;
+  max-width: 880px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(15, 122, 74, 0.08);
+  margin: 40px 16px;
+  padding: 28px;
+  margin-top: -100px;
+}
 
-    .page-banner__home-title,
-    .page-banner__title {
-        font-size: 32px;
-    }
-    .page-banner__home-subtitle {
-        font-size: 16px;
-    }
-    .page-banner--home .search-form,
-    .page-banner__search-wrapper {
-        width: 90%;
-    }
-    
-    .features__container {
-        gap: 20px;
-    }
-    .feature-card {
-        width: 120px;
-    }
+h1 {
+  font-size: 18px;
+  color: #083c35;
+  margin: 0 0 4px;
+}
+
+p.lead {
+  margin: 0 0 18px;
+  color: #6c757d;
+  font-size: 13px;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: var(--green-700);
+  font-weight: 600;
+  display: block;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6f3ea;
+  background: #fbfffb;
+  font-size: 14px;
+  outline: none;
+  transition: box-shadow .15s, border-color .15s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--green-500);
+  box-shadow: 0 4px 12px rgba(47, 166, 106, 0.12);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.muted {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
 }
