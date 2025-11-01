@@ -15,104 +15,103 @@
             <img src="assets/logoHikepass.svg" alt="Logo HikePass">
             <h2>HikePass</h2>
         </div>
-
         <nav class="navbar__menu">
             <a href="home.html">Home</a>
             <a href="reservasi.html">Reservasi</a>
             <a href="#">Tiket Saya</a>
         </nav>
-
         <div class="navbar__search">
             <p>Hai, Yanto</p>
-            <img src="assets/avatarUSer.png" alt="">
+            <img src="assets/avatarUSer.png" alt="Avatar Yanto">
         </div>
     </header>
 
+    <main>
+        <section class="page-banner page-banner--reservasi">
+            <div class="page-banner__container">
 
-    <section class="search-rsv-section">
-        <div class="container-search-rsv">
-            <img src="assets/imgBanner.jpg" alt="Banner Gunung">
-            <h2 class="title-rsv">Reservasi</h2>
-            <div class="search-rsv-container">
-                <input type="text" placeholder="Cari nama gunung atau lokasi...">
+                <img src="assets/imgBanner.jpg" alt="Banner Gunung" class="page-banner__bg">
+                <h2 class="page-banner__title">Reservasi</h2>
+                <div class="page-banner__search-wrapper">
+                    <form class="search-form">
+                        <input type="text" class="search-form__input" placeholder="Cari nama gunung atau lokasi...">
+                    </form>
+                </div>
+
+                <h1 class="page-banner__home-title"></h1>
+                <p class="page-banner__home-subtitle"></p>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="list-section">
-        <div class="container">
+        <section class="list-section">
+            <div class="container list-section__container">
 
-    <!-- CARD 1 -->
-    <div class="mountain-card">
-      <img src="assets/GunungMalabar.jpg" alt="Gunung Malabar" class="mountain-card__image">
+                <div class="mountain-card">
+                    <img src="assets/GunungMalabar.jpg" alt="Gunung Malabar" class="mountain-card__image">
+                    <div class="mountain-card__content">
+                        <h3 class="mountain-card__title">Gunung Malabar</h3>
+                        <ul class="mountain-card__info">
+                            <li><img src="assets/iconRute.svg" alt="">12 Km, 5 Pos</li>
+                            <li><img src="assets/iconApiUnggun.svg" alt="">Tidak Tersedia Camping</li>
+                            <li><img src="assets/iconAir.svg" alt="">Tersedia Mata Air</li>
+                            <li><img src="assets/iconChekcbox.svg" alt="">Pemula</li>
+                        </ul>
+                        <div class="mountain-card__price">
+                            <h4>Biaya</h4>
+                            <p class="price-tag">Rp. 30.000</p>
+                        </div>
+                        <div class="mountain-card__actions">
+                            <button class="btn btn--outline">Reservasi</button>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="mountain-card__content">
-        <h3 class="mountain-card__title">Gunung Malabar</h3>
-        <ul class="mountain-card__info">
-          <li><img src="assets/iconRute.svg" alt="">12 Km, 5 Pos</li>
-          <li><img src="assets/iconApiUnggun.svg" alt="">Tidak Tersedia Camping</li>
-          <li><img src="assets/iconAir.svg" alt="">Tersedia Mata Air</li>
-          <li><img src="assets/iconChekcbox.svg" alt="">Pemula</li>
-        </ul>
-        <div class="mountain-card__price">
-          <h4>Biaya</h4>
-          <p class="price-tag">Rp. 30.000</p>
-        </div>
-        <div class="tombol-reservasi">
-          <button class="btnReservasi">Reservasi</button>
-        </div>
-      </div>
-    </div>
+                <div class="mountain-card">
+                    <img src="assets/GunungCikuray.jpg" alt="Gunung Cikuray" class="mountain-card__image">
+                    <div class="mountain-card__content">
+                        <h3 class="mountain-card__title">Gunung Cikuray</h3>
+                        <ul class="mountain-card__info">
+                            <li><img src="assets/iconRute.svg" alt="">7 Km, 8 Pos</li>
+                            <li><img src="assets/iconApiUnggun.svg" alt="">Tersedia Camping</li>
+                            <li><img src="assets/iconAir.svg" alt="">Tersedia Mata Air</li>
+                            <li><img src="assets/iconChekcbox.svg" alt="">Menengah</li>
+                        </ul>
+                        <div class="mountain-card__price">
+                            <h4>Biaya</h4>
+                            <p class="price-tag">Rp. 25.000</p>
+                        </div>
+                        <div class="mountain-card__actions">
+                            <button class="btn btn--outline">Reservasi</button>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- CARD 2 -->
-    <div class="mountain-card">
-      <img src="assets/GunungCikuray.jpg" alt="Gunung Cikuray" class="mountain-card__image">
-
-      <div class="mountain-card__content">
-        <h3 class="mountain-card__title">Gunung Cikuray</h3>
-        <ul class="mountain-card__info">
-          <li><img src="assets/iconRute.svg" alt="">7 Km, 8 Pos</li>
-          <li><img src="assets/iconApiUnggun.svg" alt="">Tersedia Camping</li>
-          <li><img src="assets/iconAir.svg" alt="">Tersedia Mata Air</li>
-          <li><img src="assets/iconChekcbox.svg" alt="">Menengah</li>
-        </ul>
-        <div class="mountain-card__price">
-          <h4>Biaya</h4>
-          <p class="price-tag">Rp. 25.000</p>
-        </div>
-        <div class="tombol-reservasi">
-          <button class="btnReservasi">Reservasi</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="mountain-card">
-      <img src="assets/GunungGuntur.jpg" alt="Gunung Guntur" class="mountain-card__image">
-
-      <div class="mountain-card__content">
-        <h3 class="mountain-card__title">Gunung Guntur</h3>
-        <ul class="mountain-card__info">
-          <li><img src="assets/iconRute.svg" alt="">4 Km, 4 Pos</li>
-          <li><img src="assets/iconApiUnggun.svg" alt="">Tidak Tersedia Camping</li>
-          <li><img src="assets/iconAirCross.svg" alt="">Tidak Tersedia Mata Air</li>
-          <li><img src="assets/iconChekcbox.svg" alt="">Pemula</li>
-        </ul>
-        <div class="mountain-card__price">
-          <h4>Biaya</h4>
-          <p class="price-tag">Rp. 20.000</p>
-        </div>
-        <div class="tombol-reservasi">
-          <button class="btnReservasi">Reservasi</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-    </section>
+                <div class="mountain-card">
+                    <img src="assets/GunungGuntur.jpg" alt="Gunung Guntur" class="mountain-card__image">
+                    <div class="mountain-card__content">
+                        <h3 class="mountain-card__title">Gunung Guntur</h3>
+                        <ul class="mountain-card__info">
+                            <li><img src="assets/iconRute.svg" alt="">4 Km, 4 Pos</li>
+                            <li><img src="assets/iconApiUnggun.svg" alt="">Tidak Tersedia Camping</li>
+                            <li><img src="assets/iconAir.svg" alt="">Tidak Tersedia Mata Air</li>
+                            <li><img src="assets/iconChekcbox.svg" alt="">Pemula</li>
+                        </ul>
+                        <div class="mountain-card__price">
+                            <h4>Biaya</h4>
+                            <p class="price-tag">Rp. 20.000</p>
+                        </div>
+                        <div class="mountain-card__actions">
+                            <button class="btn btn--outline">Reservasi</button>
+                        </div>
+                    </div>
+                    <h2>test</h2>
+                </div>
 
 
-
+            </div>
+        </section>
+    </main>
 
 </body>
 
