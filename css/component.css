@@ -65,3 +65,34 @@ button.secondary {
 button.secondary:hover {
     background: rgba(15, 122, 74, 0.05);
 }
+
+.btn-primary {
+    background-color: #0c665c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #09564d;
+}
+
+.btn-secondary {
+    background-color: #e5e5e5;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #d4d4d4;
+}

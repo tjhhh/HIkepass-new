@@ -14,6 +14,7 @@ if (togglePassword && passwordInput) {
 const userBtn = document.getElementById("userBtn");
 const signinBtn = document.getElementById("signin-btn");
 const reservasiBtn = document.getElementById("reservasi-btn");
+const rsvSemeruBtn = document.getElementById("reservasi-semeru-btn");
 
 if (signinBtn) {
     signinBtn.addEventListener("click", () => {
@@ -30,6 +31,12 @@ if (userBtn) {
 if (reservasiBtn) {
     reservasiBtn.addEventListener("click", () => {
         window.location.href = "reservasi.html";
+    });
+}
+
+if (rsvSemeruBtn) {
+    rsvSemeruBtn.addEventListener("click", () => {
+        window.location.href = "semeru-page.html";
     });
 }
 
