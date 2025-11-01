@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Reservasi</title>
+
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/page-formReservasi.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logoHikepass.svg" alt="Logo HikePass">
+            <h2>HikePass</h2>
+        </div>
+
+        <nav class="navbar-menu">
+            <a href="home.html">Home</a>
+            <a href="reservasi.html" class="active">Reservasi</a>
+            <a href="tiket.html">Tiket Saya</a>
+        </nav>
+
+        <div class="logo">
+            <p>Hai, Yanto</p>
+            <img src="assets/avatarUser.png" alt="User Avatar">
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <button class="back-btn" id="back-btnFormReservasi">
+                <img src="assets/iconBack.svg" alt="Back icon">
+                <span>Kembali</span>
+            </button>
+
+
+
+            <div class="mountain-card">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop"
+                    alt="Gunung Malabar" class="mountain-image">
+                <div class="mountain-info">
+                    <h2 class="mountain-name">Gunung Malabar</h2>
+                    <p class="mountain-height">2222 MDPL</p>
+
+                    <ul class="facility-list">
+                        <li>
+                            <span><img src="assets/iconRute.svg" alt="" class="detail-icon"></span>
+                            <span>12 Km, 5 Pos</span>
+                        </li>
+                        <li class="no-camping">
+                            <span><img src="assets/iconUnavailable.svg" alt="" class="detail-icon"></span>
+                            <span>Tidak Tersedia Camping</span>
+                        </li>
+                        <li>
+                            <span><img src="assets/iconAir.svg" alt="" class="detail-icon"></span>
+                            <span>Tersedia Mata Air</span>
+                        </li>
+                        <li>
+                            <span><img src="assets/iconChekcbox.svg" alt="" class="detail-icon"></span>
+                            <span>Pemula</span>
+                        </li>
+                    </ul>
+
+                    <div class="price-section">
+                        <div class="price-label">Biaya</div>
+                        <span class="price-amount">Rp 30.000</span>
+                    </div>
+
+                    <div class="rules-section">
+                        <h4>Aturan</h4>
+                        <ol>
+                            <li>Harus sopan</li>
+                            <li>Sampah dibawa turun</li>
+                            <li>Dilarang megganggu habitat</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="form-card">
+                <h1 class="form-title">Isi Data Pendaki</h1>
+
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label class="form-label">Nama Lengkap</label>
+                        <input type="text" placeholder="Nama Lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">NIK</label>
+                        <input type="text" placeholder="Nomor Induk Kependudukan" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Jenis Kelamin</label>
+                        <select required>
+                            <option value="">-- Pilih Jenis Kelamin --</option>
+                            <option value="L">Laki-laki</option>
+                            <option value="P">Perempuan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">No Telepon</label>
+                        <input type="tel" placeholder="08xxxxxxxxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Alamat</label>
+                        <textarea placeholder="Alamat lengkap" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Basecamp</label>
+                        <select required>
+                            <option value="">-- Pilih Jalur --</option>
+                            <option value="jalur1">Jalur 1</option>
+                            <option value="jalur2">Jalur 2</option>
+                            <option value="jalur3">Jalur 3</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Jumlah Pendaki</label>
+                        <input type="number" placeholder="1" min="1" value="1" id="jumlahPendaki" required>
+                    </div>
+
+                    <div class="total-section">
+                        <div class="total-label">Total Biaya</div>
+                        <div class="total-amount" id="totalBiaya">Rp 30.000</div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Reservasi</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 HikePass. All Rights Reserved.
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

@@ -13,7 +13,20 @@ if (togglePassword && passwordInput) {
 // Navigasi tombol admin/user
 const userBtn = document.getElementById("userBtn");
 const signinBtn = document.getElementById("signin-btn");
-const reservasiBtn = document.getElementById("reservasi-btn");
+const backToReservasiBtn = document.getElementById("back-btn");
+
+// Tombol Reservasi di halaman reservasi.html
+document.addEventListener("DOMContentLoaded", () => {
+    const semuaTombolReservasi = document.querySelectorAll(".btnReservasi");
+
+    semuaTombolReservasi.forEach(tombol => {
+        tombol.addEventListener("click", () => {
+            window.location.href = "formReservasi.html";
+        });
+    });
+});
+
+
 
 if (signinBtn) {
     signinBtn.addEventListener("click", () => {
@@ -27,11 +40,52 @@ if (userBtn) {
     });
 }
 
-if (reservasiBtn) {
-    reservasiBtn.addEventListener("click", () => {
-        window.location.href = "reservasi.html";
+
+if (backToReservasiBtn) {
+    backToReservasiBtn.addEventListener("click", () => {
+        window.location.href = "formReservasi.html";
     });
 }
+
+
+
+// Script untuk tombol back dengan ID "back-btn"
+document.addEventListener('DOMContentLoaded', function () {
+    const backButton = document.getElementById('back-btnFormReservasi');
+
+    if (backButton) {
+        backButton.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Cek apakah form sudah diisi
+            const form = document.getElementById('registrationForm');
+            let hasValue = false;
+
+            if (form) {
+                const inputs = form.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    if (input.value && input.value.trim() !== '') {
+                        hasValue = true;
+                    }
+                });
+            }
+
+            // Fungsi untuk kembali
+            function goBack() {
+                window.location.href = 'reservasi.html';
+            }
+
+            // Konfirmasi jika ada data
+            if (hasValue) {
+                if (confirm('Data yang Anda masukkan akan hilang. Yakin ingin kembali?')) {
+                    goBack();
+                }
+            } else {
+                goBack();
+            }
+        });
+    }
+});
 
 // Toggle form Sign In ↔ Register
 const showRegister = document.getElementById("showRegister");
@@ -51,15 +105,17 @@ if (showRegister && showLogin) {
     });
 }
 
+
 // Tombol menuju halaman reservasi
 function pindahKeReservasi() {
     console.log("Memindahkan ke halaman reservasi...");
     window.location.href = "reservasi.html";
 }
 
+
 const tombolReservasi = document.getElementsByClassName("btnReservasi")[0];
 if (tombolReservasi) {
-    tombolReservasi.addEventListener("click", pindahKeReservasi);
+    tombolReservasi.addEventListener("click", pindahKeFormReservasi);
 }
 
 //LAPORAN USER
