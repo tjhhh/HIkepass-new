@@ -13,20 +13,8 @@ if (togglePassword && passwordInput) {
 // Navigasi tombol admin/user
 const userBtn = document.getElementById("userBtn");
 const signinBtn = document.getElementById("signin-btn");
-const backToReservasiBtn = document.getElementById("back-btn");
-
-// Tombol Reservasi di halaman reservasi.html
-document.addEventListener("DOMContentLoaded", () => {
-    const semuaTombolReservasi = document.querySelectorAll(".btnReservasi");
-
-    semuaTombolReservasi.forEach(tombol => {
-        tombol.addEventListener("click", () => {
-            window.location.href = "formReservasi.html";
-        });
-    });
-});
-
-
+const reservasiBtn = document.getElementById("reservasi-btn");
+const rsvSemeruBtn = document.getElementById("reservasi-semeru-btn");
 
 if (signinBtn) {
     signinBtn.addEventListener("click", () => {
@@ -47,45 +35,11 @@ if (backToReservasiBtn) {
     });
 }
 
-
-
-// Script untuk tombol back dengan ID "back-btn"
-document.addEventListener('DOMContentLoaded', function () {
-    const backButton = document.getElementById('back-btnFormReservasi');
-
-    if (backButton) {
-        backButton.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            // Cek apakah form sudah diisi
-            const form = document.getElementById('registrationForm');
-            let hasValue = false;
-
-            if (form) {
-                const inputs = form.querySelectorAll('input, select, textarea');
-                inputs.forEach(input => {
-                    if (input.value && input.value.trim() !== '') {
-                        hasValue = true;
-                    }
-                });
-            }
-
-            // Fungsi untuk kembali
-            function goBack() {
-                window.location.href = 'reservasi.html';
-            }
-
-            // Konfirmasi jika ada data
-            if (hasValue) {
-                if (confirm('Data yang Anda masukkan akan hilang. Yakin ingin kembali?')) {
-                    goBack();
-                }
-            } else {
-                goBack();
-            }
-        });
-    }
-});
+if (rsvSemeruBtn) {
+    rsvSemeruBtn.addEventListener("click", () => {
+        window.location.href = "semeru-page.html";
+    });
+}
 
 // Toggle form Sign In ↔ Register
 const showRegister = document.getElementById("showRegister");

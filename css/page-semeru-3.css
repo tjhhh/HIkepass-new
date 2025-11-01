@@ -1,0 +1,105 @@
+/* FORM WRAPPER */
+.form-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -20px;
+}
+
+/* TITLE */
+.form-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+/* INFO BOX */
+.info-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-primary, #007f5f);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    color: #007f5f;
+    background: #f9fffc;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-box i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-style: normal;
+    font-weight: bold;
+    background: #007f5f;
+    color: white;
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+/* FORM ITEM */
+.form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-item-text {
+    color: #555;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* BUTTON VARIANTS */
+.btn-primary-outline {
+    background: #ffffff;
+    border: 2px solid var(--color-primary, #007f5f);
+    color: var(--color-primary, #007f5f);
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary-outline:hover {
+    background: var(--color-primary, #007f5f);
+    color: #fff;
+}
+
+/* FOOTER BUTTON */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.input-nama {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.input-nama:focus {
+  border-color: #0c665c;
+  outline: none;
+  box-shadow: 0 0 3px rgba(12, 102, 92, 0.3);
+}
