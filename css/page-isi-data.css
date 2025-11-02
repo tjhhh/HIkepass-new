@@ -1,0 +1,440 @@
+/* ========================================
+   PAGE ISI DATA - GUNUNG SEMERU
+   ======================================== */
+
+/* --- Common Container & Section --- */
+.sectionInformasiPendakian,
+.sectionDataPendaki,
+.sectionKonfirmasiAturan {
+    position: relative;
+    background-color: var(--background);
+    padding: 3rem 0;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* --- Form Card Wrapper --- */
+.form-card {
+    margin-top: -60px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Footer --- */
+footer {
+    width: 100%;
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    font-size: 14px;
+}
+
+/* ========================================
+   SECTION 1: INFORMASI PENDAKIAN
+   ======================================== */
+
+.form-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+
+/* --- Info Section (biaya & maksimal transaksi) --- */
+.form-info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-bottom: 1.8rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.text-info {
+    padding: 8px;
+}
+
+.form-info strong {
+    color: #111;
+}
+
+/* --- Form Container --- */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* --- Input Group --- */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label,
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+    display: block;
+    font-size: 14px;
+}
+
+.form-group select,
+.form-group input[type="date"],
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group textarea {
+    padding: 0.7rem 1rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0c665c;
+    box-shadow: 0 0 0 2px rgba(12, 102, 92, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Select Dropdown Custom Arrow */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 40px;
+}
+
+/* --- Ticket Counter --- */
+.ticket-counter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-counter {
+    background-color: #e8f1ef;
+    color: #0c665c;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-counter:hover:not(:disabled) {
+    background-color: #0c665c;
+    color: #fff;
+}
+
+.btn-counter:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#ticketCount {
+    min-width: 24px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- Full Width Button --- */
+.fullwidth {
+    width: 100%;
+}
+
+/* ========================================
+   SECTION 2: DATA PENDAKI
+   ======================================== */
+
+/* Alert Box */
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 20px;
+    background: #fff9e6;
+    border: 1px solid #ffd666;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.alert-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: #faad14;
+    font-size: 20px;
+}
+
+.alert-text {
+    font-size: 14px;
+    color: #614700;
+    line-height: 1.6;
+}
+
+/* Form Grid for Data Pendaki */
+.sectionDataPendaki .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+/* File Upload */
+.file-upload-wrapper {
+    position: relative;
+    border: 2px dashed #d9d9d9;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background: #fafafa;
+    transition: all 0.3s;
+}
+
+.file-upload-wrapper:hover {
+    border-color: var(--secondary);
+    background: #f0f9f7;
+}
+
+.file-upload-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+.file-upload-label:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.file-upload-text {
+    display: block;
+    font-size: 13px;
+    color: #8c8c8c;
+}
+
+/* Action Buttons */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.btn-cancel {
+    padding: 12px 30px;
+    background: #e5e5e5;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+    background: #d4d4d4;
+}
+
+.btn-next {
+    padding: 12px 30px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-next:hover {
+    background: var(--secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(8, 60, 53, 0.2);
+}
+
+/* ========================================
+   SECTION 3: KONFIRMASI ATURAN
+   ======================================== */
+
+/* --- Daftar Aturan --- */
+.aturan-list {
+    font-size: 0.95rem;
+    color: #444;
+    margin-left: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.aturan-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Info Jam Operasional --- */
+.jam-operasional {
+    font-size: 0.95rem;
+    color: #222;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Persetujuan Checkbox --- */
+.persetujuan {
+    background-color: #e9f7ec;
+    border: 1px solid #cce8d2;
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.agreement-text {
+    font-size: 0.9rem;
+    color: #2e473b;
+    margin: 0;
+}
+
+/* --- Footer Buttons --- */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .form-card {
+        padding: 1.5rem;
+        margin-top: -40px;
+    }
+
+    .form-row,
+    .sectionDataPendaki .form-row {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-info {
+        gap: 0.3rem;
+        text-align: left;
+    }
+
+    .btn-counter {
+        width: 32px;
+        height: 32px;
+    }
+
+    .form-title {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .form-footer {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .form-footer button {
+        width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-cancel,
+    .btn-next {
+        width: 100%;
+    }
+}

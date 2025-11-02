@@ -10,7 +10,7 @@
   width: 100%;
   box-shadow: var(--shadow);
   position: fixed;
-  top: 0; 
+  top: 0;
   z-index: 1000;
 }
 
@@ -28,6 +28,7 @@
   text-shadow: 0 6px 15px rgb(0, 0, 0);
   width: 100%;
   margin-top: 60px;
+
 }
 
 .hero-title {

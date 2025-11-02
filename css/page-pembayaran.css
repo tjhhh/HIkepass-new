@@ -1,0 +1,483 @@
+/* ========================================
+   PEMBAYARAN PAGE
+   ======================================== */
+
+.payment-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   TICKET SUMMARY
+   ======================================== */
+
+.ticket-summary {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 25px;
+    height: fit-content;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.ticket-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ticket-header img {
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.ticket-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.ticket-id {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge.belum-bayar {
+    background: #fff4e6;
+    color: #d46b08;
+}
+
+/* Detail Section */
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.detail-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.detail-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.detail-item .label {
+    color: #666;
+    font-weight: 500;
+}
+
+.detail-item .value {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Price Summary */
+.price-summary {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.price-row.total {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.total-price {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+/* ========================================
+   PAYMENT METHOD
+   ======================================== */
+
+.payment-method {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 25px;
+}
+
+.payment-option {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.payment-option.active {
+    border-color: var(--primary);
+    background: #f7faf8;
+}
+
+.option-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.option-header input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.option-header label {
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.option-desc {
+    font-size: 13px;
+    color: #666;
+}
+
+/* QRIS Section */
+.qris-section {
+    margin-top: 25px;
+}
+
+.qris-instruction {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.qris-box {
+    background: linear-gradient(135deg, #f7faf8 0%, #ffffff 100%);
+    border: 2px dashed var(--primary);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.qris-image {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 15px;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.qris-label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+}
+
+/* Payment Info */
+.payment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.info-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.info-item p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+/* Payment Actions */
+.payment-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    flex: 1;
+    padding: 14px 20px;
+    background: white;
+    border: 2px solid #d9d9d9;
+    color: #666;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-back:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-confirm {
+    flex: 2;
+    padding: 14px 20px;
+    background: var(--primary);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-confirm:hover:not(:disabled) {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(12, 102, 92, 0.3);
+}
+
+.btn-confirm:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.payment-note {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 3px solid var(--primary);
+    border-radius: 6px;
+}
+
+/* ========================================
+   SUCCESS MODAL
+   ======================================== */
+
+.success-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.success-modal {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    animation: slideUp 0.4s ease;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #0c665c 0%, #0a6055 100%);
+    color: white;
+    font-size: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 8px 20px rgba(12, 102, 92, 0.3);
+}
+
+.success-modal h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.success-modal p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.success-note {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 25px !important;
+}
+
+.btn-success {
+    padding: 14px 32px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-success:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(12, 102, 92, 0.3);
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 968px) {
+    .payment-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-summary {
+        order: 1;
+    }
+
+    .payment-method {
+        order: 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .payment-wrapper {
+        gap: 20px;
+    }
+
+    .ticket-summary,
+    .payment-method {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .ticket-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ticket-header img {
+        width: 100%;
+        height: 120px;
+    }
+
+    .detail-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .qris-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .payment-actions {
+        flex-direction: column;
+    }
+
+    .btn-back,
+    .btn-confirm {
+        width: 100%;
+    }
+}

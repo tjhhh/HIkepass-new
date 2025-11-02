@@ -1,0 +1,33 @@
+{
+                id: 'TKT001',
+                mountain: 'Gunung Semeru',
+                image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+                date: '15 November 2025',
+                status: 'berhasil',
+                climbers: 5,
+                price: 30000,
+                total: 150000,
+                posMasuk: 'Ranu Pani',
+                posKeluar: 'Lumajang',
+                tanggalMasuk: '17 November 2025',
+                tanggalKeluar: '19 November 2025',
+                nama: 'fulan',
+                nik: '330972163789621',
+                noTelepon: '082672138712',
+                jenisKelamin: 'Laki - laki',
+                alamat: 'sukabirus kost alfa jalan stroberi',
+                ktp: image
+
+            }
+
+
+{
+    id: 'TKT001',
+    mountain: 'Gunung Semeru',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+    date: '15 November 2025',
+    status: 'berhasil',
+    climbers: 5,
+    price: 30000,
+    total: 150000,
+}

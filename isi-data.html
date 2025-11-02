@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isi Data</title>
+
+    <!-- Modular CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/page-isi-data.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logoHikepass.svg" alt="Logo HikePass">
+            <h2>HikePass</h2>
+        </div>
+
+        <nav class="navbar-menu">
+            <a href="home.html">Home</a>
+            <a href="reservasi.html" class="active">Reservasi</a>
+            <a href="tiket.html">Tiket Saya</a>
+        </nav>
+
+        <div class="logo">
+            <p>Hai, Yanto</p>
+            <img src="assets/avatarUser.png" alt="User Avatar">
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero hero-gunung">
+        <div class="hero-text">
+            <h1 class="hero-title">Gunung Semeru</h1>
+            <p class="hero-subtitle">Home / Reservasi / Gunung Semeru</p>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section id="informasiPendakian" class="sectionInformasiPendakian">
+        <div class="container">
+            <div class="form-card">
+                <h3 class="form-title">Isi Form Pembuatan Surat Izin Masuk Kawasan Konservasi Gunung Semeru</h3>
+                <p class="form-desc">
+                    Gunung Semeru atau Gunung Meru adalah gunung berapi kerucut di Jawa Timur, Indonesia. Semeru
+                    merupakan gunung tertinggi di Pulau Jawa, dengan puncaknya Mahameru pada ketinggian 3.676 meter dari
+                    permukaan laut.
+                </p>
+
+                <div class="form-info">
+                    <p class="text-info"><strong>Biaya</strong> Rp. 30.000/orang</p>
+                    <p class="text-info"><strong>Maksimal Transaksi</strong> 8 Tiket</p>
+                </div>
+
+                <form id="formSemeru" class="form-container">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Pos Perizinan Masuk</label>
+                            <select required>
+                                <option value="">Pos Perizinan</option>
+                                <option value="ranu-pani">Ranu Pani</option>
+                                <option value="lumajang">Lumajang</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Pos Perizinan Keluar</label>
+                            <select required>
+                                <option value="">Pos Perizinan</option>
+                                <option value="ranu-pani">Ranu Pani</option>
+                                <option value="lumajang">Lumajang</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Tanggal Masuk</label>
+                            <input type="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tanggal Keluar</label>
+                            <input type="date" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row align-center">
+                        <div class="form-group">
+                            <label>Jumlah Tiket</label>
+                            <div class="ticket-counter">
+                                <button type="button" id="minusBtn" class="btn-counter">-</button>
+                                <span id="ticketCount">0</span>
+                                <button type="button" id="plusBtn" class="btn-counter">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit" class="btn-primary fullwidth" id="nextBtn">Selanjutnya</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            © 2025 HikePass. All Rights Reserved.
+        </footer>
+    </section>
+
+    <section id="dataPendaki" class="sectionDataPendaki" style="display: none;">
+        <!-- Main Content -->
+        <div class="container">
+            <div class="form-card">
+                <h2 class="form-title">Isi Data Pribadi Pemesan 1</h2>
+
+                <!-- Alert Box -->
+                <div class="alert">
+                    <div class="alert-icon">⚠</div>
+                    <div class="alert-text">
+                        Pengisian Data harus sesuai dengan identitas KTP. Apabila tidak sesuai dengan identitas tidak
+                        terlindungi
+                        asuransi.
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <form id="formPemesan">
+                    <div class="form-row">
+                        <!-- Nama -->
+                        <div class="form-group">
+                            <label class="form-label">Nama</label>
+                            <input type="text" placeholder="Nama" id="nama" required>
+                        </div>
+
+                        <!-- NIK -->
+                        <div class="form-group">
+                            <label class="form-label">NIK</label>
+                            <input type="text" placeholder="NIK" id="nik" maxlength="16" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <!-- No Telepon -->
+                        <div class="form-group">
+                            <label class="form-label">No Telepon</label>
+                            <input type="tel" placeholder="No Telepon" id="noTelepon" required>
+                        </div>
+
+                        <!-- Jenis Kelamin -->
+                        <div class="form-group">
+                            <label class="form-label">Jenis Kelamin</label>
+                            <select id="jenisKelamin" required>
+                                <option value="">Jenis Kelamin</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <!-- Alamat -->
+                        <div class="form-group form-group-full">
+                            <label class="form-label">Alamat</label>
+                            <textarea placeholder="Alamat Anda" id="alamat" rows="3" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <!-- Foto KTP -->
+                        <div class="form-group form-group-full">
+                            <label class="form-label">Foto KTP</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" class="file-upload-input" id="fotoKTP" accept="image/*">
+                                <label for="fotoKTP" class="file-upload-label">Choose File</label>
+                                <span class="file-upload-text" id="fileName">No file chosen</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel" id="btnBatal">Batal</button>
+                        <button type="submit" class="btn-next">Selesai</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            © 2025 HikePass. All Rights Reserved.
+        </footer>
+    </section>
+
+    <section id="konfirmasiAturan" class="sectionKonfirmasiAturan" style="display: none;">
+        <div class="container">
+            <div class="form-card">
+                <h3 class="form-title">Aturan Pendakian Gunung Semeru</h3>
+                <ol class="aturan-list">
+                    <li>Pendaki wajib mengisi formulir registrasi.</li>
+                    <li>Wajib meninggalkan identitas dan akan diambil kembali saat turun.</li>
+                    <li>Pendaki wajib mengikuti briefing atau arahan dari petugas.</li>
+                    <li>Dilarang membuat jalur sendiri.</li>
+                    <li>Dilarang mendirikan tenda di area Sunrise View.</li>
+                    <li>Dilarang merusak atau mengambil apapun milik petani di sepanjang jalur pendakian.</li>
+                    <li>Sampah wajib dibawa turun sesuai dengan jumlah yang dibawa naik.</li>
+                    <li>Dilarang membuat api unggun atau aktivitas lain yang dapat menyebabkan kebakaran.</li>
+                    <li>Dilarang membunuh hewan apapun di sepanjang jalur pendakian.</li>
+                    <li>Dilarang membuat keributan yang dapat mengganggu ketertiban umum.</li>
+                    <li>Dilarang merusak atau melubangi pipa yang ada di jalur pendakian.</li>
+                    <li>Dilarang berfoto di tempat yang berbahaya.</li>
+                    <li>Dilarang membuang sisa makanan sembarangan (sisa makanan wajib dikubur).</li>
+                    <li>Pendaki wajib mengikuti seluruh peraturan yang berlaku di basecamp dan masyarakat sekitar.</li>
+                </ol>
+
+                <p class="jam-operasional">
+                    <strong>Jam Operasional Perizinan</strong> &nbsp; 24 Jam
+                </p>
+
+                <div class="persetujuan">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="agreeCheckbox">
+                        <span class="checkmark"></span>
+                        <p class="agreement-text">Saya telah membaca, menyetujui, dan bersedia mengikuti peraturan dan
+                            SOP yang berlaku</p>
+                    </label>
+                </div>
+
+                <div class="form-footer">
+                    <button id="backBtn" class="btn-secondary">Back</button>
+                    <button id="nextBtn" class="btn-primary">Selanjutnya</button>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            © 2025 HikePass. All Rights Reserved.
+        </footer>
+    </section>
+    <script src="script/isi-data-script.js"></script>
+</body>
+
+</html>
