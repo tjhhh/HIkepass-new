@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Laporan Pendaki</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/page-laporan.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logoHikepass.svg" alt="Logo HikePass">
+            <h2>HikePass Admin</h2>
+        </div>
+
+        <nav class="navbar-menu">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="#" class="active">Laporan</a>
+            <a href="home.html">User View</a>
+        </nav>
+
+        <div class="logo">
+            <p>Admin</p>
+            <img src="assets/avatarUSer.png" alt="Avatar Admin">
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1 class="hero-title">Data Laporan Pendaki</h1>
+            <p>Admin / Laporan Pendaki</p>
+        </div>
+    </section>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="card">
+        <h2 class="title-form">Daftar Laporan</h2>
+        <p class="lead">Kelola laporan pendaki seperti keamanan, fasilitas, dan lingkungan.</p>
+
+        <!-- ACTION -->
+        <div style="display:flex; justify-content:end; margin-bottom:12px;">
+            <button id="refreshBtn" class="primary">Refresh Data</button>
+        </div>
+
+        <!-- TABEL -->
+        <div style="overflow-x:auto;">
+        <table class="table" style="width:100%;">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Kontak</th>
+                    <th>Tanggal</th>
+                    <th>Kategori</th>
+                    <th>Lokasi</th>
+                    <th>Deskripsi</th>
+                    <th>Foto</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="dataLaporan"></tbody>
+        </table>
+        </div>
+    </div>
+
+    <script src="script/laporan-admin.js"></script>
+</body>
+
+</html>
